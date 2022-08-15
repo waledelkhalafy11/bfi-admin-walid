@@ -145,7 +145,7 @@ class WebsiteController extends Controller
                 $file = $request->file('image');
                 $name=$file->getClientOriginalName();
                 $imagename = $exploreCard->place_name.'_indexof_'.rand(1,999999999).$name;
-                $file->storeAs('public/explore', $imagename);   
+                $file->move('/var/www/html/bfi-api/storage/app/public/images' , $imagename);
                 
 
                 $photoInput = array(
@@ -201,8 +201,8 @@ class WebsiteController extends Controller
                         $file = $validated['image'] ;
                         $name=$file->getClientOriginalName();
                         $imagename = $exploreCard->place_name.'_indexof_'.rand(1,999999999).$name;
-                        $file->storeAs('public/explore', $imagename);   
-                        
+                        $file->move('/var/www/html/bfi-api/storage/app/public/explore' , $imagename);
+
                             $photoInput = array(
                                 'place_name' => $validated['place_name'], 
                                 'card_image_url' => '/storage/explore/'.$imagename, 
@@ -212,7 +212,7 @@ class WebsiteController extends Controller
                         $file = $validated['image'] ;
                         $name=$file->getClientOriginalName();
                         $imagename = $exploreCard->place_name.'_indexof_'.rand(1,999999999).$name;
-                        $file->storeAs('public/explore', $imagename);   
+                        $file->move('/var/www/html/bfi-api/storage/app/public/explore' , $imagename);
                         
                             $photoInput = array(
                                 'place_name' => $validated['place_name'], 
@@ -277,7 +277,7 @@ class WebsiteController extends Controller
                     $file = $validated['image'];
                     $name=$file->getClientOriginalName();
                     $imagename = $clientCard->client_name.'_indexof_'.rand(1,999999999).$name;
-                    $file->storeAs('public/clients', $imagename);   
+                    $file->move('/var/www/html/bfi-api/storage/app/public/clients' , $imagename);
                     
                         $photoInput = array(
                             'client_name' => $validated['client_name'], 
@@ -289,7 +289,7 @@ class WebsiteController extends Controller
                     $file = $validated['image'];
                     $name=$file->getClientOriginalName();
                     $imagename = $clientCard->client_name.'_indexof_'.rand(1,999999999).$name;
-                    $file->storeAs('public/clients', $imagename);   
+                    $file->move('/var/www/html/bfi-api/storage/app/public/clients' , $imagename);
                     
                         $photoInput = array(
                             'client_name' => $validated['client_name'], 
@@ -304,12 +304,14 @@ class WebsiteController extends Controller
             
            
             }
+        
 
         
 
         return redirect('/web/clients')->with('message', 'client Updated Successfully ');
     }
         
+    
     public function addClientView(){
         return view('addnew_Client');
     }
@@ -332,7 +334,8 @@ class WebsiteController extends Controller
         $file = $validated['image'];
         $name=$file->getClientOriginalName();
         $imagename = $validated['client_name'].'_indexof_'.rand(1,999999999).$name;
-        $file->storeAs('public/clients', $imagename);   
+        $file->move('/var/www/html/bfi-api/storage/app/public/clients' , $imagename);
+
         $clientData = array(
             'client_name'=>$validated['client_name'],
             'icon_image_url'=> '/storage/clients/'.$imagename
