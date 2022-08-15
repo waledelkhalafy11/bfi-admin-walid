@@ -68,7 +68,7 @@
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2 imgcont overflow-hidden img__container ">
 
-                            <img class="w-full h-full object-cover" src="{{ $photo->unit_image_url }}" alt="">
+                            <img class="w-full h-full object-cover" src="https://api.bfi-re.com{{ $photo->unit_image_url }}" alt="">
                         </div>
 
                         <div class="row mt-2 cardbtns">
