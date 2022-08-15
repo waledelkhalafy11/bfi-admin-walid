@@ -52,7 +52,7 @@
                             </div>
                             <div class="px-2 col-12 overflow-hidden expimg__container">
 
-                                <img class="w-full h-full object-cover" src="{{ $card->card_image_url }}" />
+                                <img class="w-full h-full object-cover" src="https://api.bfi-re.com/{{$card->card_image_url }}" />
                             </div>
 
                         </div>

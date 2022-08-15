@@ -60,7 +60,7 @@
                                 </div>
                                 <div class="px-2 col-12 ">
 
-                                    <img class="w-50 h-50" src="{{$client->icon_image_url}}" />
+                                    <img class="w-50 h-50" src="https://api.bfi-re.com/{{$client->icon_image_url}}" />
                                 </div>
                             </div>
 
