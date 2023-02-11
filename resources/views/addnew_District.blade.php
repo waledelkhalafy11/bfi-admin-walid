@@ -60,19 +60,19 @@
     @csrf
     
     <label for="exampleFormControlInput1" class="form-label">District Name</label>
-    <input type="text" class="form-control" id="region" name="dist_name" placeholder="Add Name">
+    <input type="text" class="form-control" id="region" name="dist_name" placeholder="Add Name" required>
     <div class="row mt-2">
     <div class="col-6">
         <label for="exampleFormControlInput1" class="form-label">District Longitude</label>
 
-        <input type="text" class="form-control"  id="dist_longitude" name="dist_longitude" placeholder="City Longitude">
+        <input type="text" class="form-control"  id="dist_longitude" name="dist_longitude" placeholder="City Longitude" required>
         </div>
     <div class="col-6">
         <label for="exampleFormControlInput1" class="form-label">District Latitude</label>
-        <input type="text" class="form-control" id="dist_latitude" name="dist_latitude" placeholder="City Latitude">
+        <input type="text" class="form-control" id="dist_latitude" name="dist_latitude" placeholder="City Latitude" required>
         </div>
    </div>
-    <input hidden type="text" value="{{$city}}"  id="city_id" name="city_id" >
+    <input hidden type="text" value="{{$city}}"  id="city_id" name="city_id" required >
        <div class="col-12 mapp">
                   <div id="map"></div></div>
                   <button style="margin: 20px auto" class="btn btn-success" type="submit">Add District</button>

@@ -61,11 +61,11 @@
                 <div class="col-6">
 
                     <label for="exampleFormControlInput1" class="form-label">Unit Name</label>
-                    <input type="text" class="form-control" id="unit" name="unit_name" placeholder="Add Name">
+                    <input type="text" class="form-control" id="unit" name="unit_name" required placeholder="Add Name">
                 </div>
                 <div class="col-6">
                     <label for="exampleFormControlInput1" class="form-label">Unit Address</label>
-                    <input type="text" class="form-control" id="unit" name="unit_address" placeholder="Add the adress">
+                    <input type="text" class="form-control" id="unit" name="unit_address" required placeholder="Add the adress">
 
                 </div>
               </div>
@@ -73,13 +73,13 @@
                 <div class="col-3">
 
                     <label for="exampleFormControlInput1" class="form-label">Unit Price</label>
-                    <input type="number" class="form-control" id="unit" name="unit_price" placeholder="ex: 200000">
+                    <input type="number" class="form-control" id="unit" required name="unit_price" placeholder="ex: 200000">
                 </div>
 
 
                 <div class="col-3">
                     <label for="exampleFormControlInput1" class="form-label">Main Category</label>
-                    <select id="main_category" onchange="getCategories()" class="form-control" name="main_category">
+                    <select id="main_category" onchange="getCategories()" required class="form-control" name="main_category">
                       <option disabled selected value="">Select category</option>
                       <option value="Residential">Residential</option>
                       <option value="Commercial">Commercial</option>
@@ -89,14 +89,14 @@
                 </div>
                 <div onchange="getResCategories()" id="unit_categoryDiv" class="col-3">
                     <label for="exampleFormControlInput1" class="form-label">Unit Category</label>
-                    <select id="unit_category" class="form-control" name="unit_category">
+                    <select id="unit_category" class="form-control" required name="unit_category">
                         <option disabled selected value="">Select Main category First</option>
                        
                     </select>
                 </div>
                 <div id="res_unit_categoryDiv" class="col-3">
                     <label for="exampleFormControlInput1" class="form-label">Residential Unit Category</label>
-                    <select  id="res_unit_category" class="form-control" name="res_unit_category">
+                    <select  id="res_unit_category" class="form-control" required name="res_unit_category">
                         <option disabled selected value="">Select Unit category First</option>
                        
                     </select>
@@ -106,24 +106,24 @@
 
                 <label for="exampleFormControlInput1" class="form-label">Unit Description</label>
 
-                <textarea name="unit_description" id="" cols="30" rows="10">
+                <textarea name="unit_description" id="" cols="30" rows="10" required>
       write unit descreption
     </textarea>
 
             </div>
-            <input type="text" class="form-control" hidden value="{{ $district }}" id="dist_id" name="dist_id"
+            <input type="text" class="form-control" hidden value="{{ $district }}" id="dist_id" name="dist_id" required
                 placeholder="name@example.com">
             <div class="container mt-5">
                 <div class="row ">
                     <div class="col-6">
                         <label for="unit_longitude" class="form-label">Region Longitude</label>
 
-                        <input type="text" class="form-control" id="unit_longitude" name="unit_longitude"
+                        <input type="text" class="form-control" id="unit_longitude" name="unit_longitude" required
                             placeholder="unit_longitude">
                     </div>
                     <div class="col-6">
                         <label for="unit_latitude" class="form-label">Unit Latitude</label>
-                        <input type="text" class="form-control" id="unit_latitude" name="unit_latitude"
+                        <input type="text" class="form-control" id="unit_latitude" name="unit_latitude" required
                             placeholder="unit_latitude">
                     </div>
                 </div>
@@ -138,73 +138,73 @@
                 <div class="md-col-4 mr-2 xs-col-12 mb-2">
 
                     <label for="exampleFormControlInput1" class="form-label">Surfuce Area</label>
-                    <input type="number" min="0" value="0" class="form-control" id="file" name="surface_area"
+                    <input type="number" min="0" value="0" class="form-control" id="file" name="surface_area" required
                         placeholder="Surfuce Area">
                 </div>
                 <div class="md-col-4 mr-2 xs-col-12 mb-2">
 
                     <label for="exampleFormControlInput1" class="form-label">kitchen</label>
-                    <input type="number" min="0" value="0" class="form-control" id="file" name="kitchen"
+                    <input type="number" min="0" value="0" class="form-control" id="file" name="kitchen" required
                         placeholder="kitchen">
                 </div>
                 <div class="md-col-4 mr-2 xs-col-12 mb-2">
 
                     <label for="exampleFormControlInput1" class="form-label">bedroom</label>
-                    <input type="number" min="0" value="0" class="form-control" id="file" name="bedroom"
+                    <input type="number" min="0" value="0" class="form-control" id="file" name="bedroom" required
                         placeholder="bedroom">
                 </div>
                 <div class="md-col-4 mr-2 xs-col-12 mb-2">
 
                     <label for="exampleFormControlInput1" class="form-label">rooms</label>
-                    <input type="number" min="0" value="0" class="form-control" id="file" name="rooms"
+                    <input type="number" min="0" value="0" class="form-control" id="file" name="rooms" required
                         placeholder="rooms">
                 </div>
                 <div class="md-col-4 mr-2 xs-col-12 mb-2">
 
                     <label for="exampleFormControlInput1" class="form-label">living room</label>
-                    <input type="number" min="0" value="0" class="form-control" id="file" name="living_room"
+                    <input type="number" min="0" value="0" class="form-control" id="file" name="living_room" required
                         placeholder="living room">
                 </div>
                 <div class="md-col-4 mr-2 xs-col-12 mb-2">
 
                     <label for="exampleFormControlInput1" class="form-label">bathroom</label>
-                    <input type="number" min="0" value="0" class="form-control" id="file" name="bathroom"
+                    <input type="number" min="0" value="0" class="form-control" id="file" name="bathroom" required
                         placeholder="bathroom">
                 </div>
                 <div class="md-col-4 mr-2 xs-col-12 mb-2">
 
                     <label for="exampleFormControlInput1" class="form-label">garage</label>
-                    <input type="number" min="0" value="0" class="form-control" id="file" name="garage"
+                    <input type="number" min="0" value="0" class="form-control" id="file" name="garage" required
                         placeholder="garage">
                 </div>
                 <div class="md-col-4 mr-2 xs-col-12 mb-2">
 
                     <label for="exampleFormControlInput1" class="form-label">elevator</label>
-                    <input type="number" min="0" value="0" class="form-control" id="file" name="elevator"
+                    <input type="number" min="0" value="0" class="form-control" id="file" name="elevator" required
                         placeholder="elevator">
                 </div>
                 <div class="md-col-4 mr-2 xs-col-12 mb-2">
 
                     <label for="exampleFormControlInput1" class="form-label">floor</label>
-                    <input type="number" min="0" value="0" class="form-control" id="file" name="floor"
+                    <input type="number" min="0" value="0" class="form-control" id="file" name="floor" required
                         placeholder="floor">
                 </div>
                 <div class="md-col-4 mr-2 xs-col-12 mb-2">
 
                     <label for="exampleFormControlInput1" class="form-label">Garden</label>
-                    <input type="number" min="0" value="0" class="form-control" id="garden" name="garden"
+                    <input type="number" min="0" value="0" class="form-control" id="garden" name="garden" required
                         placeholder="garden">
                 </div>
                 <div class="md-col-4 mr-2 xs-col-12 mb-2">
 
                   <label for="exampleFormControlInput1" class="form-label">Pool</label>
-                  <input type="number" min="0" value="0" class="form-control" name="pool"
+                  <input type="number" min="0" value="0" class="form-control" name="pool" required
                       placeholder="Pool">
               </div>
                 <div class="md-col-4 mr-2 xs-col-12 mb-2">
 
                     <label for="exampleFormControlInput1" class="form-label">Images Upload</label>
-                    <input type="file" accept="image/png, image/gif, image/jpeg" multiple class="form-control" id="file"
+                    <input type="file" accept="image/png, image/gif, image/jpeg" multiple class="form-control" id="file" required
                         name="images[]" placeholder="Unit Photos">
                 </div>
                 

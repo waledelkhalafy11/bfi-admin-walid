@@ -58,16 +58,16 @@
   <form action="{{ route('addregion') }}" method="POST" >
     @csrf
     <label for="exampleFormControlInput1" class="form-label">Region Name</label>
-    <input type="text" class="form-control" id="region" name="region_name" placeholder="Add Name">
+    <input type="text" class="form-control" id="region" name="region_name" placeholder="Add Name" required> 
    <div class="row mt-2">
     <div class="col-6">
         <label for="exampleFormControlInput1" class="form-label">Region Longitude</label>
 
-        <input type="text" class="form-control"  id="region_longitude" name="region_longitude" placeholder="Region Longitude">
+        <input type="text" class="form-control"  id="region_longitude" name="region_longitude" required placeholder="Region Longitude">
         </div>
     <div class="col-6">
         <label for="exampleFormControlInput1" class="form-label">Region Latitude</label>
-        <input type="text" class="form-control" id="region_latitude" name="region_latitude" placeholder="Region Latitude">
+        <input type="text" class="form-control" id="region_latitude" name="region_latitude" placeholder="Region Latitude" required>
         </div>
    </div>
     <div class="col-12 mapp">

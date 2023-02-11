@@ -60,19 +60,19 @@
     @csrf
     
     <label for="exampleFormControlInput1" class="form-label">City Name</label>
-    <input type="text" class="form-control" id="region" name="city_name" placeholder="Add Name">
+    <input type="text" class="form-control" id="region" name="city_name" placeholder="Add Name" required>
     <div class="row mt-2">
     <div class="col-6">
         <label for="exampleFormControlInput1" class="form-label">City Longitude</label>
 
-        <input type="text" class="form-control"  id="city_longitude" name="city_longitude" placeholder="City Longitude">
+        <input type="text" class="form-control"  id="city_longitude" name="city_longitude" placeholder="City Longitude" required>
         </div>
     <div class="col-6">
         <label for="exampleFormControlInput1" class="form-label">City Latitude</label>
-        <input type="text" class="form-control" id="city_latitude" name="city_latitude" placeholder="City Latitude">
+        <input type="text" class="form-control" id="city_latitude" name="city_latitude" placeholder="City Latitude" required>
         </div>
    </div>
-    <input hidden type="text" value="{{$region}}"  id="region_id" name="region_id" >
+    <input hidden type="text" value="{{$region}}"  id="region_id" name="region_id" required >
        <div class="col-12 mapp">
                   <div id="map"></div></div>
                   <button style="margin: 20px auto" class="btn btn-success" type="submit">Add city</button>
